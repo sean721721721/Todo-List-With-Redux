@@ -1,0 +1,103 @@
+.container {
+    background-color:#73A1B0;
+    text-align: left;
+    margin: 100px auto;
+    width: 60%;
+    border-radius: 15px;
+    padding: 20px;
+    
+}
+
+header {
+    font-size: 3rem;
+    display: block;
+    font-family: monospace;
+    color: #F9D46C;
+}
+
+.wait-item-list, .done-item-list {
+    margin-top: 10px;
+}
+
+.wait-item-list > span:first-child,
+.done-item-list > span:first-child {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: monospace;
+    color: #F9D46C;
+}
+
+.wait-item,.done-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 10px;
+	background-color: bisque;
+	margin: 5px 10px;
+	border-radius: 1px;
+	font-size: 1.5rem;
+	font-weight: 500;
+    transform-origin: left;
+    transform: scaleX(0.1);
+	transition: all .2s;
+}
+
+.wait-item.active,.done-item.active {
+    transform: scaleX(1);
+    border-radius: 10px;
+}
+
+.wait-item > span,
+.done-item > span,
+.item_icons {
+    opacity: 0;
+    transition: all 0.6s;
+    display: flex;
+}
+
+.wait-item > span.active,
+.done-item > span.active,
+.item_icons.active
+{
+    opacity: 1;
+}
+
+button[type=submit] {
+    background-color: transparent;
+	border: 0px;
+}
+
+input {
+    border-radius: 5px; 
+    border: 1px solid #ced4da;
+    padding: .375rem .75rem;
+    width: 50%;
+}
+
+input:focus {
+    border-color: #ff6;
+    box-shadow: 1px 2px 1px #996;
+    
+}
+
+.fa-trash-alt {
+	color: gray;
+}
+
+.fa-check-circle {
+	color: forestgreen;
+}
+
+i {
+    display: block;
+    font-size: 23px;
+    color: white;
+    margin-left: 10px;
+}
+
+i[data-text]:hover {
+    cursor: pointer;
+    /* opacity: 0.3; */
+    color: black;
+
+}
