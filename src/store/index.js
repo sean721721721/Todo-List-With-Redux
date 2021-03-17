@@ -17,17 +17,17 @@ function tasks(state = INITIAL_STATE, action) {
 	console.log(action.task)
   switch (action.type) {
     case 'ADD_TASK':
-			return {
-				...state,
-				data: [...state.data, action.task]
-			}
-		case 'REMOVE_TASK':
-			return {
-				...state,
-				data: [...action.tasks]
-			}
-		default:
-			return state;
+		return {
+			...state,
+			data: [...state.data, action.task]
+		}
+	case 'REMOVE_TASK':
+		return {
+			...state,
+			data: [...action.tasks]
+		}
+	default:
+		return state;
   }
 }
 
