@@ -17,12 +17,14 @@ const Item = props => {
     const iconDiv = useRef(null);
     const dispatch =useDispatch();
     
-    const removeTask = () => {
+    const removeTask = (e) => {
+        e.preventDefault();
         tasks.splice(props.index, 1);
         dispatch(removeTaskAction(tasks));
     }
 
-    const checkTask = () => {
+    const checkTask = (e) => {
+        e.preventDefault();
         tasks[props.index].done = true;
         dispatch(removeTaskAction(tasks));
     }

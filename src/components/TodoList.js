@@ -10,9 +10,8 @@ const addTaskAction = (task) => {
 }
 
 const TodoList = () => {
-    const quantity = 8;
     const [task, setTask] = useState('');
-    const tasks = useSelector(state => state.data.slice(0, quantity));
+    const tasks = useSelector(state => state.data);
     console.log(tasks);
     const input = useRef(null);
 
