@@ -22,6 +22,8 @@ const TodoList = () => {
         dispatch(addTaskAction(task));
         console.log('add');
         setTask({title:'', done: false});
+        e.target.reset();
+
     }
 
     const taskOnChange = e => {
